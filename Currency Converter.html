@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>Currency Converter</title>
+</head>
+<style>
+
+fieldset{
+width:70%;
+border:1px solid blue;
+font-align:left;
+font-size:20px;
+}
+
+input[type=number],[id]{
+border:1px solid blue;
+margin:5px;
+border-radius:2px;
+border-width:1px;
+font-size:15px;
+}
+
+</style>
+
+<script>
+function currencyConverter(valNum){
+if(converter.rupees.value <= 0){
+window.alert("Enter Value Greater than 0");
+}
+else{
+
+document.getElementById("dollar").value = (valNum/74.93).toFixed(2);
+document.getElementById("yuan").value = (valNum/11.54).toFixed(2);
+document.getElementById("won").value = (valNum*15.36).toFixed(2);
+document.getElementById("riyal").value = (valNum/19.96).toFixed(2);
+document.getElementById("dinar").value = (valNum*0.0040).toFixed(2);
+}
+}
+</script>
+
+<body bgcolor=grey text=blue>
+
+<h1>Currency Converter</h1>
+
+<form name="converter">
+
+<fieldset>
+
+<label>Indian rupees(INR):</lable>
+
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="number" name="rupees" required>
+
+<input type="button" value="Convert" onclick="currencyConverter(converter.rupees.value)" />
+
+<br/><br/><label>United States Dollar(USD):</label>
+
+<input id="dollar" />
+<br/><br/><label>Yuan(CNY):</label>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input id="yuan" />
+<br/><br/><label>Won(KRW):</label>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input id="won" />
+<br/><br/><label>Saudi Riyal(SAR):</label>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input id="riyal" />
+<br/><br/><label>Kuwait Dinar(KWD):</label>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input id="dinar" />
+<br/><br/>
+
+<input type="reset" value="Reset Form" />
+
+<p align="center">You can press Reset Button after one use for reseting the form</p>
+
+</fieldset>
+</form>
+</body>
+</html>

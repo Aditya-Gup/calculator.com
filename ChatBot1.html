@@ -1,0 +1,94 @@
+<html>
+    <title>chatbot</title>
+<head>
+
+<script>
+know = {
+
+"Hello" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : Hi there!",
+"hello" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : Hi there!",
+"HELLO" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : Hi there!",
+
+"hi" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : Hi there!",
+"HI" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : Hi there!",
+"Hi" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : Hi there!",
+
+"Who are you?" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : I am Aditya's Assistant.",
+"who are you?" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : I am Aditya's Assistant.",
+"Who are you" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : I am Aditya's Assistant.",
+"who are you" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : I am Aditya's Assistant.",
+"who are u" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : I am Aditya's Assistant.",
+"who are u?" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : I am Aditya's Assistant.",
+"Who are u" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : I am Aditya's Assistant.",
+"Who are u?" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : I am Aditya's Assistant.",
+
+"How are you?" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : I am Fine.",
+"how are you?" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : I am Fine.",
+"how are you" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : I am Fine.",
+"How are you" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : I am Fine.",
+"How are u" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : I am Fine.",
+"how are u" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : I am Fine.",
+"How are u?" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : I am Fine.",
+"how are u?" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : I am Fine.",
+
+"How old are you?" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : I am infinite in age.",
+"how old are you?" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : I am infinite in age.",
+"How old are you" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : I am infinite in age.",
+"how old are you" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : I am infinite in age.",
+"How old are u" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : I am infinite in age.",
+"How old are u?" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : I am infinite in age.",
+"how old are u?" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : I am infinite in age.",
+"how old are u" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : I am infinite in age.",
+
+"ok" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : Yes.",
+"OK" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : Yes.",
+"Ok" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : Yes.",
+"ok..." : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Aditya's Assistant : I am infinite in age."
+
+};
+
+function talk() {
+var user = document.getElementById("userBox").value;
+document.getElementById("userBox").value= "";
+document.getElementById("chatLog").innerHTML += user+"<br>";
+
+if (user in know) {
+document.getElementById("chatLog").innerHTML += know[user] + "<br>";
+}
+ else 
+{
+document.getElementById("chatLog").innerHTML += "&nbsp &nbsp &nbsp &nbsp &nbsp &nbspSorry, I don't understand as I'm a learning chatbot...<br>";
+}
+}
+
+
+
+
+
+</script>
+
+
+
+</head>
+
+
+<body bgcolor=grey text=blue >
+
+<a href="ChatBot1.html" target="frm2" >Start the chat again</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Help.html" target=frm2 >Go back</a>
+
+
+<center><h2>Chat with Aditya's Assistant</h2></center><br>
+
+<p id="chatLog"><center><h2></h2></center><br> </p>
+
+
+
+Chat from Here
+<input id="userBox" type="text" onkeydown="if(event.keyCode == 13) {talk()}">
+
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+        fieldset{
+        width:50%;
+        border:1px solid blue;
+        font-align:left;
+        font-size:20px;
+        }
+        
+        input[type=number],[id]{
+        border:1px solid blue;
+        margin:5px;
+        border-radius:2px;
+        border-width:1px;
+        font-size:15px;
+        }
+        
+        </style>
+    <title>Weight converter</title>
+    <script>
+        function calKG(){
+            document.getElementById("grams").value = 0;
+            k = document.getElementById("kilograms").value;
+            document.getElementById("grams").value = k*1000;
+        }
+
+        function calKT(){
+            document.getElementById("tonne").value = 0;
+            k = document.getElementById("kilograms").value;
+            document.getElementById("tonne").value = k/1000;
+        }
+        function calKM(){
+            document.getElementById("milligram").value = 0;
+            k = document.getElementById("kilograms").value;
+            document.getElementById("milligram").value = k*1000000;
+        }
+        function calKC(){
+            document.getElementById("microgram").value = 0;
+            k = document.getElementById("kilograms").value;
+            document.getElementById("microgram").value = k*1000000000;
+        }
+
+
+        function calGK(){
+	    document.getElementById("kilograms").value = 0;
+            g = document.getElementById("grams").value;
+            document.getElementById("kilograms").value = g/1000;
+        }
+        function calGT(){
+            document.getElementById("tonne").value = 0;
+            g = document.getElementById("grams").value;
+            document.getElementById("tonne").value = g/1000000;
+        }
+        function calGM(){
+            document.getElementById("milligram").value = 0;
+            g = document.getElementById("grams").value;
+            document.getElementById("milligram").value = g*1000;
+        }
+        function calGC(){
+            document.getElementById("microgram").value = 0;
+            g = document.getElementById("grams").value;
+            document.getElementById("microgram").value = g*1000000;
+        }
+
+
+        function calTK(){
+	    document.getElementById("kilograms").value = 0;
+            t = document.getElementById("tonne").value;
+            document.getElementById("kilograms").value = t*1000;
+        }
+        function calTG(){
+	    document.getElementById("grams").value = 0;
+            t = document.getElementById("tonne").value;
+            document.getElementById("grams").value = t*1000000;
+        }
+        function calTM(){
+	    document.getElementById("milligram").value = 0;
+            t = document.getElementById("tonne").value;           
+            document.getElementById("milligram").value = t*1000000000;
+        }
+        function calTC(){
+	    document.getElementById("microgram").value = 0;
+            t = document.getElementById("tonne").value;           
+            document.getElementById("microgram").value = t*1000000000000;
+        }
+
+
+        function calMG(){
+	    document.getElementById("grams").value = 0;
+            m = document.getElementById("milligram").value;
+            document.getElementById("grams").value = m/1000;
+        }
+        function calMK(){
+	    document.getElementById("kilograms").value = 0;
+            m = document.getElementById("milligram").value;
+            document.getElementById("kilograms").value = m/1000000;
+        }
+        function calMT(){
+	    document.getElementById("tonne").value = 0;
+            m = document.getElementById("milligram").value;
+            document.getElementById("tonne").value = m/1000000000;
+        }
+        function calMC(){
+	    document.getElementById("microgram").value = 0;
+            m = document.getElementById("milligram").value;
+            document.getElementById("microgram").value = m*1000;
+        }
+
+
+        function calCK(){
+	    document.getElementById("kilograms").value = 0;
+            c = document.getElementById("microgram").value;
+            document.getElementById("kilograms").value = c/1000000000;
+        }
+        function calCG(){
+	    document.getElementById("grams").value = 0;
+            c = document.getElementById("microgram").value;
+            document.getElementById("grams").value = c/1000000;
+        }
+        function calCT(){
+	    document.getElementById("tonne").value = 0;
+            c = document.getElementById("microgram").value;
+            document.getElementById("tonne").value = c/1000000000000;
+        }
+        function calCM(){
+	    document.getElementById("milligram").value = 0;
+            c = document.getElementById("microgram").value;
+            document.getElementById("milligram").value = c/1000;
+        }
+
+
+    </script>
+</head>
+<body bgcolor=grey text=blue >
+<h2><big><u>Mass Converter</u></big></h2>
+    <form>
+<h3>
+<br>
+<br>
+        <fieldset>
+            <label>Tonne</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="tonne" oninput="calTG();calTK();calTM();calTC()" onchange="calTG();calTC();calTK();calTM()" />
+            <br>
+<br>
+            <label>Kilograms</label>&nbsp;<input type="number" id="kilograms" oninput="calKG();calKT();calKM();calKC()" onchange="calKG();calKT();calKM();calKC()" />
+            <br>
+<br>
+            <label>Grams</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="grams" oninput="calGK();calGT();calGM();calGC()" onchange="calGK();calGT();calGM();calGC()" />
+            <br>
+<br>
+            <label>Milligram</label>&nbsp;&nbsp;<input type="number" id="milligram" oninput="calMG();calMK();calMT();calMC()" onchange="calMG();calMK();calMC();calMT()" />
+            <br>
+<br>
+            <label>Microgram</label><input type="number" id="microgram" oninput="calCG();calCK();calCM();calCT()" onchange="calCG();calCK();calCM();calCT()" />
+
+        </fieldset>
+</h3>
+    </form>
+</body>
+</html>
